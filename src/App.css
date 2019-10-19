@@ -1,0 +1,28 @@
+#users {
+    border: 1px solid #ddd;
+}
+
+#users td,
+th {
+    padding: 8px 18px;
+}
+
+.rightside {
+    text-align: right;
+}
+
+#users {
+    border-collapse: collapse;
+}
+
+.middle-page {
+    margin: 10%;
+}
+
+.border-to-th {
+    border-bottom: 1px solid #dfd8d8;
+}
+
+.bordertotd {
+    border-right: 1px solid #dfd8d8;
+}
