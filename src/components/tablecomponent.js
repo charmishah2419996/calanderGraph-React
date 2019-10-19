@@ -45,16 +45,28 @@ export default class Table extends Component {
         <div className="middle-page">
           <table id="users">
             <tr className="border-to-th">
-              <th colspan="2"> Intern - assignment </th>{" "}
-              <th className="rightside"> Start Date </th>{" "}
-              <th className="rightside"> Due Date </th>{" "}
-            </tr>{" "}
+              <th colspan="2"> Intern - assignment </th>
+              <th className="rightside"> Start Date </th>
+              <th className="rightside"> Due Date </th>
+            </tr>
             {this.state.data.map((dynamicdata, key) => (
               <tr>
-                <td className="bordertotd"> {dynamicdata.id} </td>{" "}
-                <td> {dynamicdata.name} </td>{" "}
-                <td className="rightside"> {dynamicdata.start} </td>{" "}
-                <td className="rightside"> {dynamicdata.end} </td>{" "}
+                <td className="bordertotd"> {dynamicdata.id} </td>
+                <td> {dynamicdata.name} </td>
+                <td className="rightside">
+                  {new Intl.DateTimeFormat("en-GB", {
+                    year: "numeric",
+                    month: "long",
+                    day: "2-digit"
+                  }).format(this.newStartDate)}
+                </td>
+                <td className="rightside">
+                  {new Intl.DateTimeFormat("en-GB", {
+                    year: "numeric",
+                    month: "long",
+                    day: "2-digit"
+                  }).format(this.newStartDate)}
+                </td>
               </tr>
             ))}{" "}
           </table>{" "}
